@@ -1,0 +1,36 @@
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
+import Home from './pages/Home'
+import About from './pages/About'
+import Blog from './pages/Blog'
+import Donate from './pages/Donate'
+import Contact from './pages/Contact'
+import BlogPost from "./pages/BlogPost";
+import StoryPage from './pages/StoryPage'
+import Programs from "./pages/Programs";
+import GetInvolved from "./pages/GetInvolved";
+import ThankYou from "./pages/ThankYou";
+import Resources from "./pages/Resources";
+export default function App() {
+  return (
+    <div className="min-h-screen bg-white text-gray-900 font-sans">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/donate" element={<Donate />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/story/:name" element={<StoryPage />} />
+        <Route path="/programs" element={<Programs />} />
+<Route path="/get-involved" element={<GetInvolved />} />
+<Route path="/thank-you" element={<ThankYou />} />
+<Route path="/resources" element={<Resources />} />
+<Route path="/news" element={<Blog />} />
+      </Routes>
+      <Footer />
+    </div>
+  )
+}

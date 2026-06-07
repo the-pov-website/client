@@ -27,7 +27,7 @@ export default function BlogPost() {
 
   return (
     <div className="max-w-3xl mx-auto px-6 py-16">
-      <button onClick={() => navigate("/blog")} className="text-sm text-gray-400 hover:text-black mb-8 block">
+      <button onClick={() => navigate(-1)} className="text-sm text-gray-400 hover:text-black mb-8 block">
         ← Back to blog
       </button>
       {post.image_url && (

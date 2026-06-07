@@ -13,7 +13,7 @@ export default function ThankYou() {
 
       <Link
         to="/"
-        className="bg-emerald-600 text-white px-6 py-3 rounded-lg"
+        className="bg-amber-600 text-white px-6 py-3 rounded-lg"
       >
         Back Home
       </Link>

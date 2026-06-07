@@ -1,6 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
 import { siteConfig } from "../data/content";
+import Logo from "../images/JiYm801.svg?react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,27 +11,27 @@ export default function Navbar() {
   const linkClass = ({ isActive }) =>
     `text-sm font-medium capitalize ${
       isActive
-        ? "text-emerald-700"
-        : "text-gray-500 hover:text-emerald-600"
+        ? "text-amber-700"
+        : "text-gray-500 hover:text-amber-600"
     }`;
 const links = [
   { name: "Home", path: "/" },
   { name: "About", path: "/about" },
   { name: "Programs", path: "/programs" },
   { name: "Get Involved", path: "/get-involved" },
-  { name: "News", path: "/news" },
-  { name: "Resources", path: "/resources" },
+ /*  { name: "News", path: "/news" }, */
+/*   { name: "Resources", path: "/resources" }, */
   { name: "Contact", path: "/contact" },
+  {name: "FAQ",path: "/faq"},
+  
 ];
 
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link
-          to="/"
-          className="font-serif text-xl font-bold text-emerald-800"
-        >
-          {siteConfig.name}
+       <Link to="/about" className="flex items-center gap-2 font-serif text-xl font-bold text-green-500">
+         <Logo className="h-20 w-40 text-amber-600" fill="currentColor" />
+        {/*  {siteConfig.name} */}
         </Link>
 
         {/* Desktop */}
@@ -47,7 +48,7 @@ const links = [
         <div className="flex items-center gap-3">
           <Link
             to="/donate"
-            className="hidden md:block bg-emerald-600 text-white text-sm font-medium px-5 py-2 rounded-lg hover:bg-emerald-700"
+            className="hidden md:block bg-amber-600 text-white text-sm font-medium px-5 py-2 rounded-lg hover:bg-amber-700"
           >
             Donate
           </Link>
@@ -86,7 +87,7 @@ const links = [
               onClick={closeMenu}
               className={({ isActive }) =>
                 `text-left text-sm font-medium ${
-                  isActive ? "text-emerald-700" : "text-gray-500"
+                  isActive ? "text-amber-700" : "text-gray-500"
                 }`
               }
             >
@@ -97,7 +98,7 @@ const links = [
           <Link
             to="/donate"
             onClick={closeMenu}
-            className="bg-emerald-600 text-white text-sm font-medium px-5 py-2 rounded-lg"
+            className="bg-amber-600 text-white text-sm font-medium px-5 py-2 rounded-lg"
           >
             Donate
           </Link>

@@ -3,57 +3,6 @@ import { team } from "../data/content";
 
 export default function About({nav}) {
     const navigate=useNavigate()
-  const stats = [
-    { number: "50,000+", label: "Lives Impacted" },
-    { number: "200+", label: "Communities Served" },
-    { number: "500+", label: "Volunteers" },
-    { number: "15", label: "Countries Reached" },
-  ];
-
-  const timeline = [
-    {
-      year: "2015",
-      title: "HopeRise Founded",
-      description:
-        "A small group of volunteers came together with a mission to create sustainable change.",
-    },
-    {
-      year: "2017",
-      title: "Education Initiative",
-      description:
-        "Launched our first educational support programs for underserved communities.",
-    },
-    {
-      year: "2020",
-      title: "Healthcare Expansion",
-      description:
-        "Expanded operations to include healthcare outreach and medical assistance.",
-    },
-    {
-      year: "2025",
-      title: "Global Impact",
-      description:
-        "Reached thousands of beneficiaries across multiple countries.",
-    },
-  ];
-
-  const values = [
-    {
-      icon: "🎯",
-      title: "Mission",
-      text: "Empowering underserved communities through education, healthcare, and opportunity.",
-    },
-    {
-      icon: "🌍",
-      title: "Vision",
-      text: "A world where every individual has the resources to thrive.",
-    },
-    {
-      icon: "❤️",
-      title: "Values",
-      text: "Compassion, integrity, sustainability, and community leadership.",
-    },
-  ];
 
   return (
     <div>
@@ -68,231 +17,197 @@ export default function About({nav}) {
         <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative z-10 text-center text-white px-6 max-w-3xl">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">
-            About HopeRise
-          </h1>
+         <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">
+  About POV
+</h1>
 
-          <p className="text-lg md:text-xl text-gray-200">
-            Building stronger communities through education, healthcare,
-            and sustainable development.
-          </p>
+<p className="text-xl text-gray-200">
+  Building the Foundation for Purpose, Ownership, and Voice
+</p>
         </div>
       </section>
 
       {/* STORY */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <img
-            src="https://media.gettyimages.com/id/143177286/photo/businessman-leaping-off-a-boulder.jpg?s=612x612&w=0&k=20&c=w-acXo0IXEXGXi6FGunsP-Nn6hG5mz4btM1oVzCwv0A="
-            alt="Community support"
-            className="rounded-3xl shadow-lg"
-          />
+     <section className="max-w-5xl mx-auto px-6 py-20">
+  <h2 className="font-serif text-4xl font-bold mb-8">
+    Who We Are
+  </h2>
 
-          <div>
-            <h2 className="font-serif text-4xl font-bold mb-6">
-              Our Story
-            </h2>
+  <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+    <p>
+      POV (Purpose. Ownership. Voice.) is a federally registered
+      Canadian nonprofit organization dedicated to helping young
+      people build a stronger sense of identity.
+    </p>
 
-            <p className="text-gray-600 mb-4 leading-relaxed">
-              HopeRise began in 2015 when a small group of volunteers
-              recognized the barriers many communities faced in accessing
-              education, healthcare, and economic opportunity.
-            </p>
+    <p>
+      While many systems focus on achievement, performance, and
+      outcomes, we focus on something that comes first:
+      understanding who you are.
+    </p>
 
-            <p className="text-gray-600 leading-relaxed">
-              What started as a local initiative has grown into a movement
-              impacting thousands of lives through community-led and
-              sustainable programs.
-            </p>
-          </div>
-        </div>
-      </section>
+    <p>
+      We believe that before direction, there must be identity.
+      Before achievement, there must be clarity. And before impact,
+      there must be self-awareness.
+    </p>
+  </div>
+</section>
 
-      {/* MISSION VISION VALUES */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8">
-            {values.map((item) => (
-              <div
-                key={item.title}
-                className="bg-white p-8 rounded-2xl shadow-sm text-center"
-              >
-                <div className="text-5xl mb-4">{item.icon}</div>
+{/* WHY POV EXISTS*/}
+<section className="bg-gray-50 py-20">
+  <div className="max-w-5xl mx-auto px-6">
 
-                <h3 className="font-bold text-xl mb-3">
-                  {item.title}
-                </h3>
+    <h2 className="font-serif text-4xl font-bold mb-8">
+      Why POV Exists
+    </h2>
 
-                <p className="text-gray-500">{item.text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+      <p>
+        Young people today face more information, expectations,
+        and pressure than ever before.
+      </p>
 
-      {/* IMPACT STATS */}
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="font-serif text-4xl font-bold text-center mb-12">
-          Our Impact
-        </h2>
+      <p>
+        They are often told what to study, what career to pursue,
+        and who they should become, yet few are given the opportunity
+        to explore who they are.
+      </p>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="bg-gray-50 rounded-2xl p-8 text-center"
-            >
-              <div className="text-4xl font-bold text-emerald-600">
-                {stat.number}
-              </div>
+      <p>
+        The consequences are visible in rising levels of uncertainty,
+        disengagement, and hopelessness among youth.
+      </p>
 
-              <div className="text-gray-500 mt-2">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <p>
+        POV was created to address this gap.
+      </p>
 
-      {/* HOW WE WORK */}
-      <section className="bg-emerald-50 py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="font-serif text-4xl font-bold text-center mb-12">
-            How We Work
-          </h2>
+      <p>
+        Our work helps young people develop the self-awareness,
+        confidence, and personal agency needed to navigate life
+        with purpose and intention.
+      </p>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl text-center">
-              <div className="text-5xl mb-4">👂</div>
-              <h3 className="font-bold text-xl mb-3">Listen</h3>
-              <p className="text-gray-500">
-                We work closely with local communities to understand
-                their needs and priorities.
-              </p>
-            </div>
+    </div>
 
-            <div className="bg-white p-8 rounded-2xl text-center">
-              <div className="text-5xl mb-4">🏗️</div>
-              <h3 className="font-bold text-xl mb-3">Build</h3>
-              <p className="text-gray-500">
-                Together we create sustainable programs that address
-                root causes rather than symptoms.
-              </p>
-            </div>
+  </div>
+</section>
 
-            <div className="bg-white p-8 rounded-2xl text-center">
-              <div className="text-5xl mb-4">🌱</div>
-              <h3 className="font-bold text-xl mb-3">Sustain</h3>
-              <p className="text-gray-500">
-                We empower communities to lead and maintain progress
-                long after programs begin.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* TIMELINE */}
-      <section className="max-w-4xl mx-auto px-6 py-20">
-        <h2 className="font-serif text-4xl font-bold text-center mb-12">
-          Our Journey
-        </h2>
+{/* WHAT WE DO */}
+<section className="max-w-6xl mx-auto px-6 py-20">
 
-        <div className="space-y-8">
-          {timeline.map((item) => (
-            <div
-              key={item.year}
-              className="border-l-4 border-emerald-500 pl-6"
-            >
-              <div className="text-emerald-600 font-bold">
-                {item.year}
-              </div>
+  <h2 className="font-serif text-4xl font-bold text-center mb-12">
+    What We Do
+  </h2>
 
-              <h3 className="font-semibold text-lg">
-                {item.title}
-              </h3>
+  <div className="grid md:grid-cols-5 gap-6">
 
-              <p className="text-gray-500 mt-2">
-                {item.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
+    {[
+      "Discover their purpose",
+      "Take ownership of their growth",
+      "Develop confidence in their voice",
+      "Build meaningful connections",
+      "Strengthen leadership capacity",
+    ].map(item => (
+      <div
+        key={item}
+        className="border rounded-2xl p-6 text-center"
+      >
+        {item}
+      </div>
+    ))}
 
-      {/* TEAM */}
-      <section className="bg-gray-50 py-20">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="font-serif text-4xl font-bold text-center mb-12">
-            Meet Our Team
-          </h2>
+  </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {team.map((member) => (
-              <div
-                key={member.name}
-                className="bg-white rounded-2xl p-8 text-center shadow-sm"
-              >
-                <div className="w-20 h-20 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-700 font-bold text-xl mx-auto mb-4">
-                  {member.initials}
-                </div>
+</section>
 
-                <div className="font-semibold">
-                  {member.name}
-                </div>
 
-                <div className="text-sm text-gray-500 mt-1">
-                  {member.role}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+{/* SDG FOCUS */}
+<section className="bg-amber-50 py-20">
 
-      {/* TESTIMONIAL */}
-      <section className="max-w-4xl mx-auto px-6 py-20 text-center">
-        <div className="bg-white rounded-3xl shadow-sm p-10">
-          <div className="text-4xl mb-4">💬</div>
+  <div className="max-w-6xl mx-auto px-6">
 
-          <p className="text-xl italic text-gray-600 mb-6">
-            "HopeRise transformed our village by providing educational
-            resources that continue benefiting children today."
-          </p>
+    <h2 className="font-serif text-4xl font-bold text-center mb-12">
+      Our Focus Areas
+    </h2>
 
-          <div className="font-semibold">
-            Community Leader
-          </div>
-        </div>
-      </section>
+    <div className="grid md:grid-cols-3 gap-8">
+
+      <div className="bg-white p-8 rounded-2xl">
+        <h3 className="font-bold text-xl mb-4">
+          Gender Equality
+        </h3>
+
+        <p>
+          Creating spaces where women and girls can grow,
+          lead, and thrive.
+        </p>
+      </div>
+
+      <div className="bg-white p-8 rounded-2xl">
+        <h3 className="font-bold text-xl mb-4">
+          Purpose Education
+        </h3>
+
+        <p>
+          Helping young people develop clarity,
+          direction, and self-awareness.
+        </p>
+      </div>
+
+      <div className="bg-white p-8 rounded-2xl">
+        <h3 className="font-bold text-xl mb-4">
+          Eradication of Mental Poverty
+        </h3>
+
+        <p>
+          Addressing the lack of identity,
+          purpose, and personal agency.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
 
       {/* CTA */}
-      <section className="bg-emerald-600 text-white py-24">
-        <div className="max-w-3xl mx-auto text-center px-6">
-          <h2 className="font-serif text-5xl font-bold mb-6">
-            Join Our Mission
-          </h2>
+    <section className="bg-black text-white py-24">
 
-          <p className="text-lg text-emerald-100 mb-8">
-            Together we can create lasting change and build stronger
-            communities for future generations.
-          </p>
+  <div className="max-w-3xl mx-auto text-center px-6">
 
-          <div className="flex gap-4 justify-center flex-wrap">
-          
-          <Link
-            to="/donate"
-            className="bg-emerald-600 hover:bg-emerald-700 px-8 py-4 rounded-lg font-medium border border-white"
-          >
-            Donate
-          </Link>
+    <h2 className="font-serif text-5xl font-bold mb-6">
+      Join the Movement
+    </h2>
 
-            <button className="border border-white px-8 py-4 rounded-lg">
-              Volunteer
-            </button>
-          </div>
-        </div>
-      </section>
+    <p className="text-lg text-gray-300 mb-8">
+      Every young person deserves the opportunity
+      to understand who they are before deciding
+      who they want to become.
+    </p>
+
+    <p className="text-lg text-gray-300 mb-10">
+      Whether you are a participant, volunteer,
+      educator, partner, or supporter, we invite
+      you to join us in building a generation
+      grounded in purpose, ownership, and voice.
+    </p>
+
+    <Link
+      to="/get-involved"
+      className="inline-block bg-amber-600 px-8 py-4 rounded-xl font-semibold"
+    >
+      Volunteer With Us
+    </Link>
+
+  </div>
+
+</section>
     </div>
   );
 }

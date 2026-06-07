@@ -15,18 +15,18 @@ export default function Donate() {
 
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
         {tiers.map(t => (
-          <div key={t.label} className={`rounded-xl p-6 text-center ${t.featured ? "border-2 border-emerald-500" : "border border-gray-100"}`}>
+          <div key={t.label} className={`rounded-xl p-6 text-center ${t.featured ? "border-2 border-amber-500" : "border border-gray-100"}`}>
             {t.featured && (
-              <span className="inline-block bg-emerald-50 text-emerald-800 text-xs px-3 py-1 rounded-full mb-3">
+              <span className="inline-block bg-amber-50 text-amber-800 text-xs px-3 py-1 rounded-full mb-3">
                 Most popular
               </span>
             )}
-            <div className="font-serif text-3xl font-bold text-emerald-600">{t.amount}</div>
+            <div className="font-serif text-3xl font-bold text-amber-600">{t.amount}</div>
             <div className="text-sm font-medium mt-1 mb-2">{t.label}</div>
             <div className="text-xs text-gray-400 mb-4">{t.desc}</div>
             <button
               onClick={() => handleDonate(t.link)}
-              className={`w-full py-2 rounded-lg text-sm font-medium ${t.featured ? "bg-emerald-600 text-white hover:bg-emerald-700" : "border border-emerald-500 text-emerald-700 hover:bg-emerald-50"}`}
+              className={`w-full py-2 rounded-lg text-sm font-medium ${t.featured ? "bg-amber-600 text-white hover:bg-amber-700" : "border border-amber-500 text-amber-700 hover:bg-amber-50"}`}
             >
               Donate {t.amount}
             </button>
@@ -42,11 +42,11 @@ export default function Donate() {
             value={customAmount}
             onChange={e => setCustomAmount(e.target.value)}
             placeholder="$ Custom amount"
-            className="border border-gray-200 rounded-lg px-4 py-2 text-sm w-48 focus:outline-none focus:border-emerald-400"
+            className="border border-gray-200 rounded-lg px-4 py-2 text-sm w-48 focus:outline-none focus:border-amber-400"
           />
           <button
             onClick={() => handleDonate("https://buy.stripe.com/YOUR_CUSTOM_LINK")}
-            className="bg-emerald-600 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-emerald-700"
+            className="bg-amber-600 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-amber-700"
           >
             Donate
           </button>

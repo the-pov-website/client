@@ -31,13 +31,13 @@ export default function Newsletter() {
   }
 
   return (
-    <div className="bg-emerald-50 rounded-2xl p-10 text-center">
-      <h3 className="font-serif text-2xl font-bold text-emerald-800 mb-2">Stay in the loop</h3>
-      <p className="text-sm text-emerald-700 mb-6">
+    <div className="bg-amber-50 rounded-2xl p-10 text-center">
+      <h3 className="font-serif text-2xl font-bold text-amber-800 mb-2">Stay in the loop</h3>
+      <p className="text-sm text-amber-700 mb-6">
         Get updates from the field, stories of impact, and news about our programs.
       </p>
       {subscribed ? (
-        <p className="text-emerald-700 font-medium">Thanks for subscribing!</p>
+        <p className="text-amber-700 font-medium">Thanks for subscribing!</p>
       ) : (
         <>
           {error && <p className="text-red-500 text-sm mb-3">{error}</p>}
@@ -47,12 +47,12 @@ export default function Newsletter() {
               value={email}
               onChange={e => setEmail(e.target.value)}
               placeholder="Your email address"
-              className="flex-1 min-w-0 px-4 py-2 border border-emerald-300 rounded-lg text-sm bg-white focus:outline-none focus:border-emerald-500"
+              className="flex-1 min-w-0 px-4 py-2 border border-amber-300 rounded-lg text-sm bg-white focus:outline-none focus:border-amber-500"
             />
             <button
               onClick={subscribe}
               disabled={loading}
-              className="bg-emerald-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-emerald-700 disabled:opacity-50"
+              className="bg-amber-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-amber-700 disabled:opacity-50"
             >
               {loading ? "..." : "Subscribe"}
             </button>

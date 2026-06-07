@@ -25,7 +25,7 @@ export default function Resources() {
           <a
             key={resource.title}
             href={resource.file}
-            className="block border rounded-xl p-5 hover:border-emerald-500"
+            className="block border rounded-xl p-5 hover:border-amber-500"
           >
             {resource.title}
           </a>

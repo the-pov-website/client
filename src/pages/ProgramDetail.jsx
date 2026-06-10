@@ -12,7 +12,12 @@ export default function ProgramDetail() {
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-16">
-
+            {/* Hero Image */}
+      <img
+        src={program.image}
+        alt={program.title}
+        className="w-full h-[250px] md:h-[450px] object-cover rounded-3xl mb-10"
+      />
       <h1 className="text-5xl font-bold mb-2">
         {program.title}
       </h1>

@@ -1,3 +1,8 @@
+
+import identityImg from "../images/identity_conference.jpg";
+import teaPartyImg from "../images/tea-party.jpg";
+
+
 export const siteConfig = {
   name: "P.O.V",
   tagline: "Empowering communities since 2015",
@@ -134,6 +139,7 @@ export const tiers = [
 export const programs = {
   "identity-conference": {
     title: "Identity Conference",
+    image:identityImg,
     subtitle: "Becoming Starts Here",
     tagline: "POV's Flagship Annual Conference | Youth & Young Professionals",
 
@@ -187,6 +193,7 @@ Through guided reflection, meaningful conversations, and practical learning expe
 
   "tea-party": {
     title: "POV Tea Party",
+    image:teaPartyImg,
     subtitle: "Safe Spaces. Strong Voices.",
     tagline: "Intimate Experience | Curated Women's Gathering",
 

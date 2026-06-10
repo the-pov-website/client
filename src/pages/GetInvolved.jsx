@@ -5,24 +5,58 @@ import {
   Handshake,
   Megaphone
 } from "lucide-react";
-
+import getin from "../images/get-involved.jpg"
 export default function GetInvolved() {
   return (
     <div>
 
-      {/* HERO */}
-      <section className="bg-amber-600 text-white py-24">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h1 className="font-serif text-5xl font-bold mb-6">
-            Get Involved
-          </h1>
+{/* HERO */}
+<section className="relative h-[70vh] flex items-center justify-center text-white overflow-hidden">
 
-          <p className="text-xl text-amber-100">
-            Join us in helping young people discover their purpose,
-            take ownership of their growth, and find their voice.
-          </p>
-        </div>
-      </section>
+  {/* background image */}
+  <img
+    src={getin}
+    alt=""
+    className="absolute inset-0 w-full h-full object-cover"
+  />
+
+  {/* dark overlay so text is readable */}
+  <div className="absolute inset-0 bg-black/60" />
+
+  {/* content */}
+  <div className="relative max-w-4xl mx-auto text-center px-6">
+
+    <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6">
+      Get Involved
+    </h1>
+
+    <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+      Join us in helping young people discover their purpose,
+      take ownership of their growth, and find their voice.
+    </p>
+
+    <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+
+      <Link
+        to="/programs"
+        className="bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition"
+      >
+        View Programs
+      </Link>
+
+      <Link
+        to="/donate"
+        className="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-black transition"
+      >
+        Donate
+      </Link>
+
+    </div>
+
+  </div>
+</section>
+
+
 
       {/* HOW CAN I GET INVOLVED */}
       <section className="max-w-6xl mx-auto px-6 py-20">

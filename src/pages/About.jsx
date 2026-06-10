@@ -1,5 +1,7 @@
 import {Link, useNavigate } from "react-router-dom";
 import { team } from "../data/content";
+import whowr from "../images/who-we-are.jpg"
+import bg from "../images/back-ground.png"
 
 export default function About({nav}) {
     const navigate=useNavigate()
@@ -9,7 +11,7 @@ export default function About({nav}) {
       {/* HERO */}
       <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c"
+          src={bg}
           alt="HopeRise volunteers"
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -27,30 +29,44 @@ export default function About({nav}) {
         </div>
       </section>
 
-      {/* STORY */}
-     <section className="max-w-5xl mx-auto px-6 py-20">
-  <h2 className="font-serif text-4xl font-bold mb-8">
+      {/*story */}
+<section className="max-w-5xl mx-auto px-6 py-20">
+  <h2 className="font-serif text-4xl font-bold mb-10">
     Who We Are
   </h2>
 
-  <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-    <p>
-      POV (Purpose. Ownership. Voice.) is a federally registered
-      Canadian nonprofit organization dedicated to helping young
-      people build a stronger sense of identity.
-    </p>
+  <div className="grid md:grid-cols-2 gap-10 items-center">
 
-    <p>
-      While many systems focus on achievement, performance, and
-      outcomes, we focus on something that comes first:
-      understanding who you are.
-    </p>
+    {/* TEXT */}
+    <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+      <p>
+        POV (Purpose. Ownership. Voice.) is a federally registered
+        Canadian nonprofit organization dedicated to helping young
+        people build a stronger sense of identity.
+      </p>
 
-    <p>
-      We believe that before direction, there must be identity.
-      Before achievement, there must be clarity. And before impact,
-      there must be self-awareness.
-    </p>
+      <p>
+        While many systems focus on achievement, performance, and
+        outcomes, we focus on something that comes first:
+        understanding who you are.
+      </p>
+
+      <p>
+        We believe that before direction, there must be identity.
+        Before achievement, there must be clarity. And before impact,
+        there must be self-awareness.
+      </p>
+    </div>
+
+    {/* IMAGE */}
+    <div className="w-full">
+      <img
+        src={whowr}
+        alt="POV story"
+        className="w-full h-[400px] object-cover rounded-3xl shadow-md"
+      />
+    </div>
+
   </div>
 </section>
 

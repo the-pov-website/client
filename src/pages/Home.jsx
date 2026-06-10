@@ -5,7 +5,14 @@ import { useNavigate,Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { supabase } from "../lib/supabase";
 import ProgramDetail from "./ProgramDetail";
+import identityImg from "../images/identity_conference.jpg";
+import teaPartyImg from "../images/tea-party.jpg";
+import m1 from "../images/moments-1.jpg";
+import m2 from "../images/moments-2.jpg";
+import m3 from "../images/moments-3.jpg";
+import m4 from "../images/moments-4.jpg";
 import { Scale,Heart,Globe,ShieldCheck,Brain,Users,Ticket,Handshake,Megaphone,Gift } from "lucide-react";
+import homebg from "../images/home-bg.jpg"
 export default function Home() {
   const programs = [
   {
@@ -94,7 +101,7 @@ const [loadingStories, setLoadingStories] = useState(true);
       {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <img
-          src="https://mentalhealthcommission.ca/wp-content/uploads/2025/05/ChatSafe-2-1-1024x576.png"
+          src={homebg}
           alt=""
           className="absolute inset-0 w-full h-full object-cover"
         />
@@ -255,6 +262,38 @@ const [loadingStories, setLoadingStories] = useState(true);
   </ul>
 </section>
 
+{/* MOMENTS THAT MATTER */}
+<section className="max-w-6xl mx-auto px-6 py-20">
+  <h2 className="text-4xl font-bold text-center mb-3">
+    Moments That Matter
+  </h2>
+
+  <p className="text-gray-500 text-center mb-10">
+    Real moments from our programs and community gatherings.
+  </p>
+
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+    {[
+     m1,m2,m3,m4
+
+      
+    ].map((img, i) => (
+      <div
+        key={i}
+        className="overflow-hidden rounded-2xl group aspect-square"
+      >
+        <img
+          src={img}
+          alt={`moment-${i}`}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+      </div>
+    ))}
+
+  </div>
+</section>
+
 {/* WHO WE SERVE */}
 
 <section className="bg-gray-50 py-20">
@@ -278,7 +317,7 @@ const [loadingStories, setLoadingStories] = useState(true);
 </section>
   
   {/* PROGRAMS */}
-<section className="max-w-6xl mx-auto px-6 py-20">
+      <section className="max-w-6xl mx-auto px-6 py-20">
   <h2 className="text-4xl font-bold text-center mb-12">
     Our Programs
   </h2>
@@ -288,33 +327,51 @@ const [loadingStories, setLoadingStories] = useState(true);
     {/* Identity Conference */}
     <Link
       to="/programs/identity-conference"
-      className="border rounded-2xl p-8 hover:shadow-md transition"
+      className="group border rounded-3xl overflow-hidden hover:shadow-xl transition bg-white"
     >
-      <Brain className="w-8 h-8 text-amber-600 mb-4" />
+      <div className="w-full aspect-[16/9] overflow-hidden rounded-2xl">
+  <img
+    src={identityImg}
+    className="w-full h-full object-cover"
+  />
+</div>
 
-      <h3 className="text-2xl font-bold mb-3">
-        Identity Conference
-      </h3>
+      <div className="p-8">
+        <Brain className="w-8 h-8 text-amber-600 mb-4" />
 
-      <p className="text-gray-600">
-        A transformative event helping youth gain identity clarity, purpose, and direction.
-      </p>
+        <h3 className="text-2xl font-bold mb-3">
+          Identity Conference
+        </h3>
+
+        <p className="text-gray-600">
+          A transformative event helping youth gain identity clarity, purpose, and direction.
+        </p>
+      </div>
     </Link>
 
     {/* Tea Party */}
     <Link
       to="/programs/tea-party"
-      className="border rounded-2xl p-8 hover:shadow-md transition"
+      className="group border rounded-3xl overflow-hidden hover:shadow-xl transition bg-white"
     >
-      <Users className="w-8 h-8 text-amber-600 mb-4" />
+      <div className="w-full aspect-[16/9] overflow-hidden rounded-2xl">
+  <img
+    src={teaPartyImg}
+    className="w-full h-full object-cover"
+  />
+</div>
 
-      <h3 className="text-2xl font-bold mb-3">
-        POV Tea Party
-      </h3>
+      <div className="p-8">
+        <Users className="w-8 h-8 text-amber-600 mb-4" />
 
-      <p className="text-gray-600">
-        A reflective gathering focused on connection, conversation, and personal growth.
-      </p>
+        <h3 className="text-2xl font-bold mb-3">
+          POV Tea Party
+        </h3>
+
+        <p className="text-gray-600">
+          A reflective gathering focused on connection, conversation, and personal growth.
+        </p>
+      </div>
     </Link>
 
   </div>
@@ -419,10 +476,10 @@ const [loadingStories, setLoadingStories] = useState(true);
       </section> */}
 
       {/* NEWSLETTER */}
-      {/* <section className="max-w-5xl mx-auto px-6 py-20">
+       <section className="max-w-5xl mx-auto px-6 py-20">
         <Newsletter />
       </section>
-       */}
+       
 
       {/* GET INVOLVED*/}
     

@@ -17,10 +17,12 @@ import GetInvolvedDetail from './components/GetInvolvedDetail'
 import ProgramDetail from './pages/ProgramDetail'
 import FAQ from './pages/FAQ.jsx'
 import Programs from './pages/ProgramList.jsx'
+import { useEffect } from 'react'
 
 export default function App() {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
+      <ScrollToTop/>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -44,4 +46,16 @@ export default function App() {
       <Footer />
     </div>
   )
+}
+
+// scrolltotop
+import { useLocation } from "react-router-dom";
+ function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
 }

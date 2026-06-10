@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { supabase } from "../lib/supabase";
 import {
   Mail,
   Phone,
@@ -20,7 +21,16 @@ export default function Contact() {
 
   const handleSubmit = async () => {
     if (!formData.name || !formData.email || !formData.message) return;
-    setSent(true);
+
+    const { error } = await supabase.from("messages").insert([
+      formData,
+    ]);
+
+    if (!error) {
+      setSent(true);
+    } else {
+      console.error(error);
+    }
   };
 
   return (

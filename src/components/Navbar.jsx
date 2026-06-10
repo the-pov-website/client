@@ -1,7 +1,7 @@
 import { NavLink, Link } from "react-router-dom";
 import { useState } from "react";
 import { siteConfig } from "../data/content";
-import Logo from "../images/JiYm801.svg?react";
+import logo from "../images/pov-logo.jpeg";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,7 +19,7 @@ const links = [
   { name: "About", path: "/about" },
   { name: "Programs", path: "/programs" },
   { name: "Get Involved", path: "/get-involved" },
- /*  { name: "News", path: "/news" }, */
+  { name: "News", path: "/news" },
 /*   { name: "Resources", path: "/resources" }, */
   { name: "Contact", path: "/contact" },
   {name: "FAQ",path: "/faq"},
@@ -29,10 +29,13 @@ const links = [
   return (
     <nav className="sticky top-0 z-50 bg-white border-b border-gray-100">
       <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-       <Link to="/about" className="flex items-center gap-2 font-serif text-xl font-bold text-green-500">
-         <Logo className="h-20 w-40 text-amber-600" fill="currentColor" />
-        {/*  {siteConfig.name} */}
-        </Link>
+      <Link to="/about" className="flex items-center">
+  <img
+    src={logo}
+    alt="POV Logo"
+    className="h-25 w-auto"
+  />
+</Link>
 
         {/* Desktop */}
         <ul className="hidden md:flex gap-6 list-none">

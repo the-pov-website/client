@@ -40,15 +40,11 @@ export default function About({nav}) {
     {/* TEXT */}
     <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
       <p>
-        POV (Purpose. Ownership. Voice.) is a federally registered
-        Canadian nonprofit organization dedicated to helping young
-        people build a stronger sense of identity.
+        POV is a federally incorporated organization in Canada. We are the first-ever identity infrastructure movement in Canada focused on youth.
       </p>
 
       <p>
-        While many systems focus on achievement, performance, and
-        outcomes, we focus on something that comes first:
-        understanding who you are.
+       While many systems focus on doing, we focus on being. At POV, the WHO precedes the what. We leverage identity integration as a nation building strategy and youth development focus.
       </p>
 
       <p>

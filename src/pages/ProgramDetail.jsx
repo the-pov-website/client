@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { programs } from "../data/content";
 
+
 export default function ProgramDetail() {
   const { slug } = useParams();
 

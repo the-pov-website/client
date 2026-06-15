@@ -212,8 +212,7 @@ const [loadingStories, setLoadingStories] = useState(true);
       </h2>
 
       <p>
-        To empower youth and young adults through clarity
-        and confidence to become a self-aware generation.
+       To be at the forefront of raising a self aware and purpose driven generation.
       </p>
     </div>
 

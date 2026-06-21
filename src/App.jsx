@@ -19,6 +19,7 @@ import FAQ from './pages/FAQ.jsx'
 import Programs from './pages/ProgramList.jsx'
 import { useEffect } from 'react'
 
+
 export default function App() {
   return (
     <div className="min-h-screen bg-white text-gray-900 font-sans">
@@ -42,6 +43,7 @@ export default function App() {
         <Route path="/programs/:slug" element={<ProgramDetail />} />
         <Route path="/faq" element={<FAQ />} />
         {/* <Route path="/programs/:id" element={<ProgramDetail />} /> */}
+      
       </Routes>
       <Footer />
     </div>

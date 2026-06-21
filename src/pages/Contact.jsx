@@ -11,6 +11,7 @@ import {
 import { FaInstagram, FaLinkedin, FaTiktok, FaYoutube } from "react-icons/fa";
 
 export default function Contact() {
+   const [comingSoon, setComingSoon] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -157,50 +158,73 @@ export default function Contact() {
             )}
 
             {/* SOCIALS */}
-<div className="mt-8">
+ <div className="mt-8">
   <h3 className="text-sm text-gray-500 mb-3">Follow Us</h3>
 
   <div className="flex gap-5 items-center">
-    <a
-      href="https://linkedin.com"
-      target="_blank"
-      className="flex items-center gap-2 text-gray-600 hover:text-amber-600"
-    >
-      <FaLinkedin size={18} />
-      <span>LinkedIn</span>
-    </a>
+          <button
+            onClick={() => setComingSoon("LinkedIn")}
+            className="flex items-center gap-2 text-gray-600 hover:text-amber-600"
+          >
+            <FaLinkedin size={18} />
+            <span>LinkedIn</span>
+          </button>
 
-    <a
-      href="https://instagram.com"
-      target="_blank"
-      className="flex items-center gap-2 text-gray-600 hover:text-amber-600"
-    >
-      <FaInstagram size={18} />
-      <span>Instagram</span>
-    </a>
+          <button
+            onClick={() => setComingSoon("Instagram")}
+            className="flex items-center gap-2 text-gray-600 hover:text-amber-600"
+          >
+            <FaInstagram size={18} />
+            <span>Instagram</span>
+          </button>
 
-    <a
-      href="https://tiktok.com"
-      target="_blank"
-      className="flex items-center gap-2 text-gray-600 hover:text-amber-600"
-    >
-      <FaTiktok size={18} />
-      <span>TikTok</span>
-    </a>
-    <a
-      href="https://youtube.com"
-      target="_blank"
-      className="flex items-center gap-2 text-gray-600 hover:text-amber-600"
-    >
-      <FaYoutube size={18} />
-      <span>Youtube</span>
-    </a>
+          <button
+            onClick={() => setComingSoon("TikTok")}
+            className="flex items-center gap-2 text-gray-600 hover:text-amber-600"
+          >
+            <FaTiktok size={18} />
+            <span>TikTok</span>
+          </button>
+
+          <button
+            onClick={() => setComingSoon("YouTube")}
+            className="flex items-center gap-2 text-gray-600 hover:text-amber-600"
+          >
+            <FaYoutube size={18} />
+            <span>YouTube</span>
+          </button>
   </div>
 </div>
           </div>
 
         </div>
       </section>
+      {comingSoon && (
+  <div className="fixed inset-0 z-50 flex items-center justify-center">
+    
+    {/* blurred background */}
+    <div className="absolute inset-0 bg-black/40 backdrop-blur-md" />
+
+    {/* modal box */}
+    <div className="relative bg-white rounded-2xl shadow-xl p-8 text-center max-w-sm w-full">
+      <h2 className="text-xl font-bold mb-2">
+        {comingSoon} coming soon
+      </h2>
+
+      <p className="text-gray-600 text-sm mb-6">
+        We’re currently building our presence here. Stay tuned.
+      </p>
+
+      <button
+        onClick={() => setComingSoon(null)}
+        className="bg-amber-600 text-white px-5 py-2 rounded-lg hover:bg-amber-700"
+      >
+        Close
+      </button>
     </div>
+  </div>
+)}
+    </div>
+      
   );
 }

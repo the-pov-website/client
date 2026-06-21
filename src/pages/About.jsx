@@ -2,6 +2,9 @@ import {Link, useNavigate } from "react-router-dom";
 import { team } from "../data/content";
 import whowr from "../images/who-we-are.jpg"
 import bg from "../images/back-ground.png"
+import sdg1 from "../images/sdg-1.webp";
+import sdg4 from "../images/sdg-4.webp";
+import sdg5 from "../images/sdg-5.webp";
 
 export default function About({nav}) {
     const navigate=useNavigate()
@@ -148,17 +151,29 @@ export default function About({nav}) {
     <div className="grid md:grid-cols-3 gap-8">
 
       <div className="bg-white p-8 rounded-2xl">
+        <img
+          src={sdg1}
+          alt="SDG 1 No Poverty"
+          className="w-20 mb-4"
+        />
+
         <h3 className="font-bold text-xl mb-4">
-          Gender Equality
+          Eradication of Mental Poverty
         </h3>
 
         <p>
-          Creating spaces where women and girls can grow,
-          lead, and thrive.
+          Addressing the lack of identity,
+          purpose, and personal agency.
         </p>
       </div>
 
       <div className="bg-white p-8 rounded-2xl">
+        <img
+          src={sdg4}
+          alt="SDG 4 Quality Education"
+          className="w-20 mb-4"
+        />
+
         <h3 className="font-bold text-xl mb-4">
           Purpose Education
         </h3>
@@ -170,13 +185,19 @@ export default function About({nav}) {
       </div>
 
       <div className="bg-white p-8 rounded-2xl">
+        <img
+          src={sdg5}
+          alt="SDG 5 Gender Equality"
+          className="w-20 mb-4"
+        />
+
         <h3 className="font-bold text-xl mb-4">
-          Eradication of Mental Poverty
+          Gender Equality
         </h3>
 
         <p>
-          Addressing the lack of identity,
-          purpose, and personal agency.
+          Creating spaces where women and girls can grow,
+          lead, and thrive.
         </p>
       </div>
 
@@ -185,7 +206,6 @@ export default function About({nav}) {
   </div>
 
 </section>
-
 
 
       {/* CTA */}

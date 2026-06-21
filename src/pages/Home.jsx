@@ -212,7 +212,8 @@ const [loadingStories, setLoadingStories] = useState(true);
       </h2>
 
       <p>
-       To be at the forefront of raising a self aware and purpose driven generation.
+        Empowering youths in the GTA to discover who they are, develop agency and become purpose driven leaders.
+       {/* To be at the forefront of raising a self aware and purpose driven generation. */}
       </p>
     </div>
 
@@ -514,6 +515,7 @@ const [loadingStories, setLoadingStories] = useState(true);
         <Gift />
         <span>Support through donations</span>
       </div>
+      
 
     </div>
 
@@ -523,6 +525,46 @@ const [loadingStories, setLoadingStories] = useState(true);
     >
       Join the Movement
     </Link>
+
+  </div>
+</section>
+
+{/* thermometer */}
+<section className="bg-white py-16">
+  <div className="max-w-4xl mx-auto px-6">
+
+    <h2 className="text-3xl font-bold text-center mb-4">
+      Help Us Reach Our Goal
+    </h2>
+
+    <p className="text-center text-gray-600 mb-8">
+      Every contribution helps us empower women,
+      educate youth, and eradicate mental poverty.
+    </p>
+
+    <div className="bg-amber-50 rounded-2xl shadow-lg p-6">
+      <div
+        style={{
+          position: "relative",
+          overflow: "hidden",
+          width: "100%",
+          paddingTop: "120px",
+        }}
+      >
+        <iframe
+          title="Donation thermometer"
+          style={{
+            position: "absolute",
+            border: 0,
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "120px",
+          }}
+          src="https://www.zeffy.com/embed/thermometer/donate-to-change-lives-16327"
+        />
+      </div>
+    </div>
 
   </div>
 </section>

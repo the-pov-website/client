@@ -13,6 +13,10 @@ import m3 from "../images/moments-3.jpg";
 import m4 from "../images/moments-4.jpg";
 import { Scale,Heart,Globe,ShieldCheck,Brain,Users,Ticket,Handshake,Megaphone,Gift } from "lucide-react";
 import homebg from "../images/home-bg.jpg"
+import sdg1 from "../images/sdg-1.webp";
+import sdg4 from "../images/sdg-4.webp";
+import sdg5 from "../images/sdg-5.webp";
+
 export default function Home() {
   const programs = [
   {
@@ -119,7 +123,7 @@ const [loadingStories, setLoadingStories] = useState(true);
           </h1>
 
           <p className="text-lg md:text-xl text-gray-200 mb-8">
-           POV is a federally incorporated Canadian nonprofit organization focused on youth identity.
+          Empowering youths in the GTA to discover who they are, develop agency and become purpose driven leaders.
           </p>
 
           <div className="flex gap-4 justify-center flex-wrap">
@@ -182,12 +186,41 @@ const [loadingStories, setLoadingStories] = useState(true);
       We help young people discover their purpose, take ownership of
       their growth, and find their voice with clarity and confidence.
     </p>
-
-    <p>
-      While many systems focus on outcomes, we focus on identity.
-      We believe that before direction comes self-awareness,
-      and before achievement comes understanding who you are.
+   <div className="grid grid-cols-3 gap-6 pt-4">
+  <div className="flex flex-col items-center text-center">
+    <img
+      src={sdg1}
+      alt="Eradication of Mental Poverty"
+      className="w-16 h-16 object-contain mb-2"
+    />
+    <p className="text-sm font-medium">
+      Eradication of Mental Poverty
     </p>
+  </div>
+
+  <div className="flex flex-col items-center text-center">
+    <img
+      src={sdg4}
+      alt="Purpose Education"
+      className="w-16 h-16 object-contain mb-2"
+    />
+    <p className="text-sm font-medium">
+      Purpose Education
+    </p>
+  </div>
+
+  <div className="flex flex-col items-center text-center">
+    <img
+      src={sdg5}
+      alt="Gender Equality"
+      className="w-16 h-16 object-contain mb-2"
+    />
+    <p className="text-sm font-medium">
+      Gender Equality
+    </p>
+  </div>
+</div>
+
   </div>
 </section>
   {/* VISION + MISSION*/}
@@ -212,8 +245,8 @@ const [loadingStories, setLoadingStories] = useState(true);
       </h2>
 
       <p>
-        Empowering youths in the GTA to discover who they are, develop agency and become purpose driven leaders.
-       {/* To be at the forefront of raising a self aware and purpose driven generation. */}
+        
+        To be at the forefront of raising a self aware and purpose driven generation.
       </p>
     </div>
 
@@ -376,105 +409,6 @@ const [loadingStories, setLoadingStories] = useState(true);
 
   </div>
 </section>
-
-      {/* IMPACT STORIES */}{/* 
-<section className="max-w-6xl mx-auto px-6 py-20">
-  <h2 className="font-serif text-4xl font-bold text-center mb-12">
-    Lives We've Changed
-  </h2>
-
-  <div className="grid md:grid-cols-3 gap-8">
-    {stories.map((story) => (
-      <Link
-        key={story.id}
-        to={`/stories/${story.id}`}
-        className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition block"
-      >
-        <img
-          src={story.image_url}
-          alt={story.title}
-          className="h-64 w-full object-cover"
-        />
-
-        <div className="p-6">
-          <h3 className="font-bold mb-3">{story.title}</h3>
-
-          <p className="text-gray-500 line-clamp-3">
-            {story.summary}
-          </p>
-
-          <span className="text-amber-600 text-sm font-medium mt-3 inline-block">
-            Read full story →
-          </span>
-        </div>
-      </Link>
-    ))}
-  </div>
-</section> */}
-
-      {/* GALLERY */}{/* 
-      <section className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="font-serif text-4xl font-bold text-center mb-12">
-          In Action
-        </h2>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-            <img
-              key={i}
-              src={`https://picsum.photos/600/600?random=${i}`}
-              alt=""
-              className="rounded-xl h-56 w-full object-cover"
-            />
-          ))}
-        </div>
-      </section>
- */}
-     
-        {/* BLOGS */}{/* 
-<section className="max-w-6xl mx-auto px-6 py-20">
-  <h2 className="font-serif text-4xl font-bold mb-2">
-    Latest From Our Blog
-  </h2>
-  <p className="text-gray-400 mb-8">
-    Stories, updates, and news from the field.
-  </p>
-  <div className="grid gap-4">
-    {posts.slice(0, 5).map((b) => (
-      <BlogCard
-        key={b.id}
-        blog={{
-          date: new Date(b.created_at).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }),
-          title: b.title,
-          excerpt: b.excerpt,
-          tag: "News",
-          slug: b.slug,
-        }}
-      />
-    ))}
-  </div>
-</section> */}
-
-      {/* FEATURED CAMPAIGN */}
-
-      {/* <section className="max-w-5xl mx-auto px-6 py-20">
-        <div className="bg-amber-600 text-white rounded-3xl p-10">
-          <h2 className="font-serif text-4xl font-bold mb-4">
-            Help Build 3 New Schools
-          </h2>
-
-          <p className="mb-6">
-            Together we can provide access to education for hundreds of children.
-          </p>
-
-          <div className="w-full bg-white/20 rounded-full h-4 mb-4">
-            <div className="bg-white h-4 rounded-full w-[72%]" />
-          </div>
-
-          <p>$72,000 raised of $100,000 goal</p>
-        </div>
-      </section> */}
-
       {/* NEWSLETTER */}
        <section className="max-w-5xl mx-auto px-6 py-20">
         <Newsletter />

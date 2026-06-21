@@ -50,11 +50,11 @@ export default function About({nav}) {
        While many systems focus on doing, we focus on being. At POV, the WHO precedes the what. We leverage identity integration as a nation building strategy and youth development focus.
       </p>
 
-      <p>
+      {/* <p>
         We believe that before direction, there must be identity.
         Before achievement, there must be clarity. And before impact,
         there must be self-awareness.
-      </p>
+      </p> */}
     </div>
 
     {/* IMAGE */}
@@ -154,7 +154,7 @@ export default function About({nav}) {
         <img
           src={sdg1}
           alt="SDG 1 No Poverty"
-          className="w-20 mb-4"
+          className="w-16 mb-4"
         />
 
         <h3 className="font-bold text-xl mb-4">
@@ -171,7 +171,7 @@ export default function About({nav}) {
         <img
           src={sdg4}
           alt="SDG 4 Quality Education"
-          className="w-20 mb-4"
+          className="w-16 mb-4"
         />
 
         <h3 className="font-bold text-xl mb-4">
@@ -188,7 +188,7 @@ export default function About({nav}) {
         <img
           src={sdg5}
           alt="SDG 5 Gender Equality"
-          className="w-20 mb-4"
+          className="w-16 mb-4"
         />
 
         <h3 className="font-bold text-xl mb-4">

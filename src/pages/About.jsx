@@ -5,6 +5,7 @@ import bg from "../images/back-ground.png"
 import sdg1 from "../images/sdg-1.webp";
 import sdg4 from "../images/sdg-4.webp";
 import sdg5 from "../images/sdg-5.webp";
+import vid from "../images/video.mp4"
 
 export default function About({nav}) {
     const navigate=useNavigate()
@@ -13,12 +14,15 @@ export default function About({nav}) {
     <div>
       {/* HERO */}
       <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
-        <img
-          src={bg}
-          alt="HopeRise volunteers"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-
+          <video
+    className="absolute inset-0 w-full h-full object-cover"
+    autoPlay
+    muted
+    loop
+    playsInline
+  >
+    <source src={vid} type="video/mp4" />
+  </video>
         <div className="absolute inset-0 bg-black/60" />
 
         <div className="relative z-10 text-center text-white px-6 max-w-3xl">
@@ -26,8 +30,9 @@ export default function About({nav}) {
   About POV
 </h1>
 
-<p className="text-xl text-gray-200">
-  Building the Foundation for Purpose, Ownership, and Voice
+<p className="text-xl text-white-200">
+ POV adopts a #foryouthbyyouth model, where young people are not just participants but
+active players in shaping the experience and community.
 </p>
         </div>
       </section>

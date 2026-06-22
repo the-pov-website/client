@@ -123,7 +123,7 @@ const [loadingStories, setLoadingStories] = useState(true);
           </h1>
 
           <p className="text-lg md:text-xl text-gray-200 mb-8">
-          Empowering youths in the GTA to discover who they are, develop agency and become purpose driven leaders.
+          Empowering youths in the GTA to discover identity, develop agency and become purpose driven leaders.
           </p>
 
           <div className="flex gap-4 justify-center flex-wrap">
@@ -186,6 +186,9 @@ const [loadingStories, setLoadingStories] = useState(true);
       We help young people discover their purpose, take ownership of
       their growth, and find their voice with clarity and confidence.
     </p>
+    <h3 className="text-xl font-semibold text-center text-gray-800 pt-4">
+  SDG Focus Areas
+    </h3>
    <div className="grid grid-cols-3 gap-6 pt-4">
   <div className="flex flex-col items-center text-center">
     <img
@@ -283,18 +286,21 @@ const [loadingStories, setLoadingStories] = useState(true);
 
 {/* OUR APPROACH */}
 <section className="max-w-5xl mx-auto px-6 py-20">
-  <h2 className="text-4xl font-bold mb-8">
-    Our Approach
+  <h2 className="text-4xl font-bold mb-6">
+    Our approach is participatory, reflective, and experiential.
   </h2>
 
-  <ul className="space-y-4 text-lg">
-    <li>• Identity exploration</li>
-    <li>• Storytelling and self-expression</li>
-    <li>• Real-world skill development</li>
-    <li>• Community and mentorship</li>
+  <p className="text-lg text-gray-700 mb-6">
+    We operate at the intersection of:
+  </p>
+
+  <ul className="space-y-3 text-lg text-gray-600">
+    <li>• Identity Restoration</li>
+    <li>• Storytelling and Self Expression</li>
+    <li>• Mental Health and Emotional Well-being</li>
+    <li>• Leadership and Agency-building</li>
   </ul>
 </section>
-
 {/* MOMENTS THAT MATTER */}
 <section className="max-w-6xl mx-auto px-6 py-20">
   <h2 className="text-4xl font-bold text-center mb-3">

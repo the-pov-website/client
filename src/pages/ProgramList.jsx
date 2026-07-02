@@ -10,7 +10,8 @@ const programs = [
     title: "Identity Conference",
     image:identityImg,
     description:
-      "A transformative event designed to help young people gain clarity, purpose, and direction.",
+      `  A flagship annual conference helping youth and young
+                professionals gain clarity, purpose, and direction.`,
     icon: Mic,
   },
   {
@@ -18,7 +19,8 @@ const programs = [
     title: "POV Tea Party",
     image: teaPartyImg,
     description:
-      "An intimate gathering designed for reflection, connection, and personal growth.",
+      `An intimate women's gathering focused on reflection,
+                community, and personal growth."`,
     icon: Coffee,
   },
 ];

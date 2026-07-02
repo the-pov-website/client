@@ -383,7 +383,8 @@ const [loadingStories, setLoadingStories] = useState(true);
         </h3>
 
         <p className="text-gray-600">
-          A transformative event helping youth gain identity clarity, purpose, and direction.
+          A flagship annual conference helping youth and young
+                professionals gain clarity, purpose, and direction.
         </p>
       </div>
     </Link>
@@ -408,7 +409,8 @@ const [loadingStories, setLoadingStories] = useState(true);
         </h3>
 
         <p className="text-gray-600">
-          A reflective gathering focused on connection, conversation, and personal growth.
+          An intimate women's gathering focused on reflection,
+                community, and personal growth.
         </p>
       </div>
     </Link>
